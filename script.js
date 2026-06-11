@@ -7,7 +7,7 @@ function toggleSpiele(buttonId, spieleKlasse) {
     const extraSpiele = document.querySelectorAll(spieleKlasse);
 
     let sichtbar = false;
-    let is_computer = window.innerWidth >= 768;
+    let is_computer = window.innerWidth >= 561;
     let sichtbar_mehranzeigen = 0;
     let i=0;
     if (is_computer && extraSpiele.length > 0) {

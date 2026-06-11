@@ -90,7 +90,7 @@ nav a {
 }
 
 button:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
 
 nav a:hover {
@@ -98,7 +98,7 @@ nav a:hover {
 }
 
 nav a:active {
-    transform: scale(1.2);
+    transform: scale(1.01);
 }
 
 .index-seite {
@@ -138,9 +138,15 @@ nav a:active {
 }
 
 /* Ishowspeed video */
+.video-offiziel {
+    padding: 12px;
+    align-items: center;
+}
+
 .video-offiziel video {
-    margin: 10px 10px;
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 10px;
+
 }
 
 /* Button mehr anzeigen vom Spielplan */
@@ -352,7 +358,6 @@ iframe,
     max-width: 100%;
     height: auto;
     padding: 10px;
-    padding: 1px;
     margin-bottom: 10px;
 }
 
@@ -380,7 +385,10 @@ iframe,
 }
 
 .gruppe {
-    margin-bottom: 10px;
+    color: rgba(255, 215, 0, 0.6);
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.6);
+    text-align: center;
 }
 
 /* Navigation zu anderen Seiten vom Spielplan*/
@@ -391,11 +399,20 @@ iframe,
     padding: 20px 15px;
 }
 
-.filter-section ul {
+/* .filter-section ul {
     width: 100%;
     max-width: 650px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    padding: 0;
+    margin: 0 auto 30px auto;
+    list-style: none;
+} */
+.filter-section ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 10px;
     padding: 0;
     margin: 0 auto 30px auto;
@@ -426,7 +443,7 @@ iframe,
 
 .filter-section>ul>li:hover {
     color: gold;
-    transform: scale(1.05);
+    transform: scale(1.01);
     transition: transform 0.3s ease;
 }
 
@@ -460,7 +477,6 @@ iframe,
     flex-direction: column;
     list-style: none;
     padding: 0;
-    /* gap: 10px; */
 }
 
 .navigation-impressum a {
@@ -540,12 +556,7 @@ footer li:hover {
     }
 
     /* Navigation zu anderen Seiten der Spielpläne */
-    .filter-section ul {
-        /* nimmt nur 1800pixel von dem verfügbaren Platz */
-        max-width: 1800px;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 14px;
-    }
+
 
     .filter-section a {
         font-size: 18px;
@@ -555,8 +566,9 @@ footer li:hover {
     /* Spielkarten */
     .spielplan-table tbody {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         gap: 12px;
+        margin-bottom: 20px;
     }
 
     .spiel-card {
@@ -572,16 +584,90 @@ footer li:hover {
     .spiel-stadion {
         font-size: 15px;
     }
-    .gruppe{
-        color: rgba(255, 215, 0, 0.6);;
+
+    .gruppe {
+        color: rgba(255, 215, 0, 0.6);
         margin-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 215, 0, 0.6);;
-        width: 100%;
+        border-bottom: 1px solid rgba(255, 215, 0, 0.6);
         text-align: center;
     }
 
     /* Foto in Spielplan alle Seiten */
-    
+    .news-pokal {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 30px;
+
+
+    }
+
+    .news-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .Fotonews-spielplan {
+        height: 400px;
+    }
+
+    .Fotonews-spielplan img {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .news-text h1 {
+        font-size: 25px;
+    }
+
+    .news-text p {
+        font-size: 25px;
+    }
+
+    #foto-mittelfeld {
+        font-size: 55px;
+    }
+
+    /* Footer */
+    .footer-logos,
+    .partner-logos,
+    .navigation-impressum {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+        /* align-items: center; */
+        gap: 16px;
+    }
+
+    .fifa h1 {
+        font-size: 30px;
+    }
+
+    .navigation-impressum ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navigation-impressum li {
+        margin-right: 20px;
+    }
+
+    .navigation-impressum a {
+
+        font-size: 15px;
+    }
+
+    footer img {
+        height: 40px;
+    }
+
+    .navigation-impressum a:hover {
+        color: gold;
+    }
+
 
 
 
@@ -903,4 +989,39 @@ footer {
     background-color: #020a1f;
     padding: 40px 5% 20px 5%;
 
+}
+
+
+
+
+.attraktion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10px;
+    border: 1px solid rgba(255, 215, 0, 0.6);
+
+}
+
+.video-finale {
+    padding: 12px;
+    align-items: center;
+}
+
+.video-finale video {
+    width: 100%;
+    border-radius: 10px;
+
+}
+.attraktion-card .fotonews-halbfinale{
+    align-items: center;
+    padding: 1px;
+}
+.fotonews-halbfinale img{
+    width: 100%;
+
+}
+
+.video-finale {
+    flex: 1;
 }
