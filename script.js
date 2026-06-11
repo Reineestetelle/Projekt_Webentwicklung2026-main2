@@ -7,6 +7,18 @@ function toggleSpiele(buttonId, spieleKlasse) {
     const extraSpiele = document.querySelectorAll(spieleKlasse);
 
     let sichtbar = false;
+    let is_computer = window.innerWidth >= 768;
+    let sichtbar_mehranzeigen = 0;
+    let i=0;
+    if (is_computer && extraSpiele.length > 0) {
+        while(i<8){
+            extraSpiele[i].style.display = "block";
+            sichtbar_mehranzeigen=1;
+            i++;
+        }
+
+
+    }
 
     if (button) {
         button.addEventListener("click", function () {
@@ -53,8 +65,8 @@ function countdownAktualisieren() {
 
     let zielDatum;
     let titelText;
-    
-// Countdown zum Start und wenn schon vorbei Contdown zum Finale
+
+    // Countdown zum Start und wenn schon vorbei Contdown zum Finale
 
     if (jetzt < startDatum) {
         zielDatum = startDatum;

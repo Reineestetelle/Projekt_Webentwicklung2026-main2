@@ -1,32 +1,26 @@
 /* #################### header ############ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
+/* Logo-cop oben Links mit schriften */
 #logo-links {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 10px;
-    flex-shrink: 0;
+    font-size: 5px;
 }
 
 #logo-links img {
-    width: 60px;
+    width: 55px;
     height: auto;
     display: block;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-
 }
 
 div.header-container {
     font-style: italic;
     font-family: "Bebas Neue", sans-serif;
-    align-items: center;
-
 }
 
 /*#################### Navigationsleiste mit Flexbox ############*/
@@ -34,15 +28,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    min-height: 90px;
     background-color: rgb(2, 6, 23);
-    padding: 0 20px;
+    padding: 0 16px;
     position: relative;
-    width: 100%;
-    box-sizing: border-box;
-
-    /* AJOUT : Longue ligne dorée qui sépare le Header du Body */
     border-bottom: 2px solid gold;
+
+    position: sticky;
+    top: 0;
 }
 
 .burger {
@@ -51,7 +44,7 @@ header {
     background-color: rgb(2, 6, 23);
     color: gold;
     border: none;
-    font-size: 42px;
+    font-size: 36px;
     cursor: pointer;
     z-index: 1100;
 }
@@ -60,13 +53,12 @@ header {
 nav {
     display: none;
     position: absolute;
-    top: 100px;
-    right: 20px;
+    top: 90px;
+    right: 16px;
     background-color: rgb(2, 6, 23);
     border: 1px solid rgba(255, 215, 0, 0.25);
     border-radius: 8px;
     padding: 15px;
-    z-index: 1000;
     min-width: 180px;
 }
 
@@ -76,13 +68,17 @@ nav.active {
 }
 
 nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 nav li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 nav a {
@@ -90,23 +86,20 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-family: "Bebas Neue", sans-serif;
+    font-size: 10px;
 }
 
-/* skaliert alle Button-tags der Webseite */
 button:hover {
     transform: scale(1.1);
 }
 
 nav a:hover {
     color: gold;
-
 }
 
 nav a:active {
-    transform: scale(2.1);
+    transform: scale(1.2);
 }
-
-/* background für nav und index-seite */
 
 .index-seite {
     background-color: rgb(2, 6, 23);
@@ -114,80 +107,80 @@ nav a:active {
     margin: 0;
 }
 
-/*Elemente section=text-section1  */
-
-
+/*Foto im Background vom Startseite */
 .text-section1 {
     background-image: url("./New_Fotos/header.jpg.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.text-section1 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: auto;
-    border: none;
-    font-size: 25px;
+    font-size: 18px;
+    padding: 10px;
 }
 
+/* Code für Items-größe auf dem Hintergrundsbild */
 .text-section1 h1 {
     color: white;
     text-transform: uppercase;
     font-family: "Bebas Neue", sans-serif;
-
+    font-size: 18px;
 }
 
 .text-section1 p {
     color: white;
+    font-size: 16px;
 }
 
 .jahr {
     color: gold;
-    font-size: 28px;
+    font-size: 24px;
 }
 
-.extra-spiel,
-.extra-spiel2 {
+/* Ishowspeed video */
+.video-offiziel video {
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+/* Button mehr anzeigen vom Spielplan */
+.spielplan-table tr.extra-spiel,
+.spielplan-table tr.extra-spiel2 {
     display: none;
 }
 
-
-
-/* Für mehr anzeigen-Button Spielplan... */
 .mehr-btn {
     display: block;
     margin: 25px auto;
-    padding: 14px 40px;
+    padding: 12px 28px;
     background-color: rgb(255, 188, 45);
     color: black;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-
+    font-size: 16px;
 }
 
-section {
-    padding: 20px;
-}
 
-/*---------------------------------------------------- css spielplan-Homepage------------------------------------------------------------------------------- */
-/* -----------------------------Block für Section 1-------------------------------- */
+
+
+/* section {
+    padding: 16px;
+} */
+/* Element Das grösste Turnier der Welt mit Strich neben */
 
 .titel-strich {
     display: flex;
-    width: 350px;
     align-items: center;
+    justify-content: space-around;
+    width: 70%;
 }
 
 .titel-strich i {
     color: gold;
-    font-size: small;
+    font-size: 8px;
     font-family: "Bebas Neue", sans-serif;
     text-transform: uppercase;
-
 }
 
 .titel-strich span {
@@ -196,165 +189,186 @@ section {
     background-color: gold;
 }
 
-.titel-strich {
-    justify-content: space-around;
-}
-
-
-
-
-
-
-
 /* Spielplan-Styles */
 
-/* kalender+text nebenander */
 .spielplan-seite,
 .halbfinale-seite,
 .viertelfinale-seite,
 .finale-seite,
 .achtelfinale-seite {
-    display: grid;
     color: white;
-    background-color: rgb(6, 15, 52);
+    background-color: #0a102c;
 }
 
+main {
+    padding: 10px;
+}
+
+/* Element Spielplan oben mit kalender */
 section.spielplan-header {
     display: flex;
     flex-direction: row;
-    padding: 5px;
-    margin-top: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-content h1 {
+    font-size: 15px;
 }
 
 .header-content h1~p {
-    font-size: 20px;
+    font-size: 8px;
 }
 
-/* Filter-Styles spielplan */
+.spielplan-header img {
+    width: 25px;
+    height: 30px;
+
+}
+
+
+/* countdown */
+.countdown-section {
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+
+}
+
+.countdown-section h2 {
+    color: gold;
+    font-size: 10px;
+    margin-bottom: 25px;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.countdown-box {
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 10px;
+    padding: 8px 8px;
+    background-color: transparent;
+}
+
+.countdown-box span {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    color: gold;
+}
+
+.countdown-box p {
+    margin: 8px 0 0;
+    font-size: 10px;
+}
+
+/* Spielplan Body  */
+
 .spielplan-section {
-    padding: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 
 .spielplan-table {
     width: 100%;
 }
 
-.filter-label>ul {
+.spielplan-table tbody {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    list-style: none;
-    gap: 5px;
-
-
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
 }
 
-.filter-label>ul>li {
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    font-family: "Bebas Neue", sans-serif;
+.spielplan-table tr,
+.spielplan-table td {
+    display: block;
 }
 
-.filter-label>ul>li:hover {
-    color: black;
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
+.spielplan-table tr.extra-spiel,
+.spielplan-table tr.extra-spiel2 {
+    display: none;
 }
 
-.filter-label>ul>li a {
-    color: white;
-    text-decoration: none;
-}
-
-.filter-label>ul>li a:hover {
-    color: gold;
-}
-
-/* Metadaten  */
-thead tr {
-    border: 0.1px solid rgb(110, 106, 106);
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 15px;
-    height: 30px;
-
-}
-
-/* kärtchen */
 .spiel-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    min-height: 220px;
+    height: auto;
+    padding: 10px;
     border: 1px solid rgba(255, 215, 0, 0.25);
     border-radius: 12px;
-    font-size: 18px;
     font-family: "Bebas Neue", sans-serif;
-    width: 100%;
-    padding: 10px 10px;
+    font-size: 12px;
 }
 
-.spiel-links {
+.mannschaft {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    flex: 2;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.mannschaft img {
+    width: 25px;
+    height: auto;
+    margin-right: 7px;
+}
+
+.spiel-links,
+.spiel-rechts,
+.spiel-stadion {
+    width: 100%;
 }
 
 .spiel-rechts {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    gap: 6px;
-    padding-left: 0;
-    padding-top: 10px;
-    border-left: none;
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    text-align: left;
-    min-width: 0;
-    flex: 2;
-
+    gap: 8px;
+    font-size: 12px;
 }
 
 .spiel-stadion {
-    display: flex;
-    flex-direction: column;
-    border-left: none;
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    align-items: flex-start;
-    justify-content: center;
-    flex: 2;
-    padding-top: 10px;
-
-
+    font-size: 12px;
 }
 
-.spiel-card:hover,
-.spiel-rechts:hover,
-.spiel-stadion:hover {
-    border-color: rgba(255, 215, 0, 0.6);
-}
-
-
-
-/* Erster Block mit FIFA.INfos Spielplan */
-
+/* Foto in Spielpan alle Seiten */
 .news-pokal {
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 15px;
+}
+
+.Fotonews-spielplan img,
+iframe,
+.news-pokal {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    padding: 1px;
+    margin-bottom: 10px;
+}
+
+.news-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    font-family: "Bebas Neue", sans-serif;
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    height: auto;
-    text-align: center;
+    padding: 0px 10px;
 }
 
-.news-pokal img {
-    max-width: 100%;
-    height: auto;
+.news-text h1 {
+    font-size: 15px;
+}
+
+.news-text p {
+    font-size: 8px;
 }
 
 #foto-mittelfeld {
@@ -363,151 +377,112 @@ thead tr {
 
 .news-link {
     text-decoration: none;
-    float: left;
 }
 
-.video-offiziel video {
+.gruppe {
+    margin-bottom: 10px;
+}
+
+/* Navigation zu anderen Seiten vom Spielplan*/
+.filter-section {
     width: 100%;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 15px;
+}
+
+.filter-section ul {
+    width: 100%;
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0;
+    margin: 0 auto 30px auto;
+    list-style: none;
+}
+
+.filter-section li {
     border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-
-@media (min-width: 768px) {
-    header {
-        padding: 0 40px;
-    }
-
-    #logo-links {
-        font-size: 14px;
-    }
-
-    #logo-links img {
-        width: 80px;
-        height: auto;
-    }
-
-    .jahr {
-        font-size: 28px;
-    }
-
-    #aside-foto .jahr {
-        font-size: 53px;
-    }
-
-    .burger {
-        display: none;
-    }
-
-    nav {
-        display: block;
-        position: static;
-        background-color: transparent;
-        border: none;
-    }
-
-    nav ul {
-        flex-direction: row;
-        gap: 40px;
-    }
-
-    nav li {
-        margin-bottom: 0;
-    }
-
-    .filter-label>ul {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
-    }
-
-    .spiel-card {
-        flex-direction: row;
-        font-size: 22px;
-        gap: 20px;
-    }
-
-    .spiel-rechts {
-        flex-direction: column;
-        justify-content: center;
-        border-top: none;
-        border: 1px solid rgba(255, 215, 0, 0.25);
-        padding-left: 20px;
-        padding-top: 0;
-        text-align: center;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .spiel-stadion {
-        border-top: none;
-        border: 1px solid rgba(255, 215, 0, 0.25);
-        align-items: center;
-        padding-left: 20px;
-        padding-top: 0;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .news-pokal {
-        flex-direction: row;
-        text-align: left;
-        height: auto;
-    }
-
-    .news-pokal img {
-        object-fit: cover;
-    }
-
-    .text-section1 h1 {
-        font-size: 70px;
-    }
+.filter-section a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 42px;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
 }
 
+.filter-section>ul>li:hover {
+    color: gold;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.filter-section>ul>li a:hover {
+    color: gold;
+}
+
+.spiel-card:hover {
+    border-color: rgba(255, 215, 0, 0.6);
+}
 
 /* footer */
 .footer-logos,
 .partner-logos,
 .navigation-impressum {
     display: flex;
-    width: auto;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     padding: 20px;
-    align-items: last baseline
+    /* align-items: center; */
+    gap: 16px;
 }
 
 .fifa h1 {
     color: white;
-    list-style: none;
+    font-size: 8px;
 }
 
 .navigation-impressum ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     list-style: none;
+    padding: 0;
+    /* gap: 10px; */
 }
 
 .navigation-impressum a {
     color: white;
-    margin-right: 15px;
+    margin-right: 0;
     text-decoration: none;
+    font-size: 10px;
 }
 
 .footer-logos .fifa {
     text-decoration: none;
 }
 
-
-
 footer {
     background-color: rgb(15, 63, 95);
     font-family: "Bebas Neue", sans-serif;
-    /* AJOUT : Longue ligne dorée qui sépare le Body du Footer */
     border-top: 2px solid gold;
+    height: auto;
 }
 
 footer img {
-    height: 40px;
-
+    height: 20px;
 }
 
 footer a:hover,
@@ -517,50 +492,35 @@ footer li:hover {
     color: gold;
 }
 
-/* countdown */
-.countdown-section {
-    background-color: none;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    font-family: "Bebas Neue", sans-serif;
-}
-
-.countdown-section h2 {
-    color: gold;
-    font-size: 28px;
-    margin-bottom: 25px;
-    margin-top: auto;
-    float: top;
-}
-
-.countdown {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.countdown-box {
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    border-radius: 10px;
-    padding: 20px 10px;
-    background-color: transparent;
-}
-
-.countdown-box span {
-    display: block;
-    font-size: 35px;
-    font-weight: bold;
-    color: gold;
-}
-
-.countdown-box p {
-    margin: 8px 0 0;
-    font-size: 16px;
-}
-
 /* Für PC */
 @media (min-width: 768px) {
+
+    /* header */
+    #logo-links {
+        font-size: 10px;
+    }
+
+    /* Element Spielplan oben mit kalender */
+    section.spielplan-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-content h1 {
+        font-size: 45px;
+    }
+
+    .header-content h1~p {
+        font-size: 18px;
+    }
+
+    .spielplan-header img {
+        width: 100px;
+        height: 100px;
+    }
+
     .countdown {
         grid-template-columns: repeat(4, 1fr);
         max-width: 800px;
@@ -571,25 +531,73 @@ footer li:hover {
         font-size: 40px;
     }
 
-    .countdown-box span {
-        font-size: 50px;
+    .countdown-box p {
+        font-size: 15px;
     }
 
-    /* Für navigationsleiste Startseite für PC */
-    .section2-blöcke {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 20px;
+    .countdown-box span {
+        font-size: 25px;
     }
+
+    /* Navigation zu anderen Seiten der Spielpläne */
+    .filter-section ul {
+        /* nimmt nur 1800pixel von dem verfügbaren Platz */
+        max-width: 1800px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+    }
+
+    .filter-section a {
+        font-size: 18px;
+        min-height: 48px;
+    }
+
+    /* Spielkarten */
+    .spielplan-table tbody {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 12px;
+    }
+
+    .spiel-card {
+        font-size: 15px;
+    }
+
+    .mannschaft img {
+        width: 35px;
+        height: auto;
+        margin-right: 7px;
+    }
+
+    .spiel-stadion {
+        font-size: 15px;
+    }
+    .gruppe{
+        color: rgba(255, 215, 0, 0.6);;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 215, 0, 0.6);;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Foto in Spielplan alle Seiten */
+    
+
+
 
 }
+
+/* Für navigationsleiste Startseite für PC */
+
+
 
 /* Section2 index Navigationsleiste nach dem Shakira-Video */
 .section2-blöcke {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 20px;
+    row-gap: 5px;
     font-family: "Bebas Neue", sans-serif;
+    font-size: 8px;
 
 }
 
@@ -598,15 +606,18 @@ footer li:hover {
     border: 1px solid rgba(255, 215, 0, 0.25);
     border-radius: 5px;
     margin: 10px;
-    width: auto;
     margin-top: 0;
-    padding: 10px;
-    height: auto;
+    padding: 5px;
 }
 
 .section2-blöcke1:hover {
     border: 1px solid gold;
 
+}
+
+.section2-blöcke1 img {
+    height: 40px;
+    width: 40px;
 }
 
 #karte1 {
@@ -634,7 +645,6 @@ footer li:hover {
 .section2-blöcke a {
     text-decoration: none;
     color: gold;
-
 }
 
 @media (min-width: 768px) {
@@ -642,7 +652,28 @@ footer li:hover {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .section2-blöcke1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 300px;
+        font-size: 18px;
+    }
+
+    .text-section1 {
+        background-image: url("./New_Fotos/header.jpg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+    }
 }
+
 
 
 /* ==========================================================================
