@@ -353,7 +353,8 @@ p.zahl-index {
     margin: 0;
     font-size: 15px;
 }
-.link-aside{
+
+.link-aside {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -363,6 +364,7 @@ p.zahl-index {
     margin: 0;
     font-size: 8px;
 }
+
 .news-aside {
     display: flex;
     flex-direction: row;
@@ -371,7 +373,8 @@ p.zahl-index {
     color: gold;
     gap: 10px;
 }
-.news-aside span{
+
+.news-aside span {
     flex: 1;
     height: 1px;
     background-color: gold;
@@ -387,10 +390,12 @@ p.zahl-index {
     font-weight: bold;
     cursor: pointer;
 }
-.aside-blöcke h3:hover{
-    color:gold;
+
+.aside-blöcke h3:hover {
+    color: gold;
 }
-button:hover{
+
+button:hover {
     transform: scale(1.60);
     transition: transform 0.3s ease;
 }
@@ -512,7 +517,7 @@ section.spielplan-header {
     font-size: 12px;
 }
 
-/* Foto in Spielpan alle Seiten */
+/* Foto in Spielpan alle Seiten ausser für den Finale */
 .news-pokal {
     border: 1px solid rgba(255, 215, 0, 0.25);
     border-radius: 15px;
@@ -1096,38 +1101,196 @@ footer {
 }
 
 
-/* Finale Seite */
+/* Halbfinale Seite */
 
-.attraktion-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 10px;
-    border: 1px solid rgba(255, 215, 0, 0.6);
-
+.attraktionen {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
 }
 
-.video-finale {
+.attraktionen h1,
+.attraktionen > p {
+    text-align: center;
+    color: white;
+}
+
+.attraktionen h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.attraktionen > p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.attraktionen-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.attraktion-card,
+.attraktionen .news-pokal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
     padding: 12px;
-    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 10px;
 }
 
+.fotonews-halbfinale,
+.fotonews-spielplan,
+.text-halbfinale,
+.attraktion-text,
+.video-finale {
+    width: 100%;
+}
+
+.fotonews-halbfinale img,
+.attraktionen .news-pokal img,
 .video-finale video {
     width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
     border-radius: 10px;
-
+   
 }
 
-.attraktion-card .fotonews-halbfinale {
-    align-items: center;
-    padding: 1px;
+.text-halbfinale h2,
+.attraktion-text h2 {
+    color: gold;
+    font-size: 22px;
+    margin-bottom: 8px;
 }
 
-.fotonews-halbfinale img {
+.text-halbfinale p,
+.attraktion-text p,
+.hotel-details {
+    color: white;
+    font-size: 15px;
+}
+
+.hotel-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.icon {
+    margin-right: 4px;
+}
+@media (min-width: 768px) {
+    .attraktionen {
+        padding: 30px;
+    }
+
+    .attraktionen h1 {
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .attraktionen > p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .attraktionen-container {
+        width: 100%;
+        max-width: 1200px;
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .attraktion-card,
+    .attraktionen .news-pokal {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .fotonews-halbfinale,
+    .fotonews-spielplan,
+    .text-halbfinale,
+    .attraktion-text,
+    .video-finale {
+        width: 100%;
+    }
+
+    .fotonews-halbfinale img,
+    .fotonews-spielplan img,
+    .attraktionen .news-pokal > img,
+    .video-finale video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+    .text-halbfinale,
+    .attraktion-text {
+        text-align: left;
+    }
+
+    .text-halbfinale h2,
+    .attraktion-text h2 {
+        font-size: 32px;
+        margin-top: 0;
+    }
+
+    .text-halbfinale p,
+    .attraktion-text p,
+    .hotel-details {
+        font-size: 18px;
+    }
+}
+
+/* Finale */
+.grossblock-finale {
     width: 100%;
-
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
-.video-finale {
-    flex: 1;
+.block-finale,
+.messi-video {
+    width: 100%;
+}
+
+.block-finale img,
+.messi-video video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 10px;
+}
+@media (min-width: 768px) {
+    .grossblock-finale {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 25px;
+        padding: 30px;
+    }
+    /* .block-finale img{
+        height:205px;
+    } */
 }

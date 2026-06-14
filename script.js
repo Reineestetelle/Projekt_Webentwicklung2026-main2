@@ -7,62 +7,55 @@ function toggleSpiele(buttonId, spieleKlasse) {
     const extraSpiele = document.querySelectorAll(spieleKlasse);
 
     let sichtbar = false;
-    let is_computer = window.innerWidth >= 561;
+    const is_computer = window.innerWidth >= 561;
     let sichtbar_mehranzeigen = 0;
-    let i = 0;
+
     if (is_computer && extraSpiele.length > 0) {
-        while (i < 8) {
+        const anzahlSichtbar = Math.min(8, extraSpiele.length);
+
+        for (let i = 0; i < anzahlSichtbar; i++) {
             extraSpiele[i].style.display = "block";
-            sichtbar_mehranzeigen = 1;
-            i++;
         }
 
-
+        sichtbar_mehranzeigen = anzahlSichtbar;
     }
 
-    function toggleSpiele(buttonId, spieleKlasse) {
-        const button = document.getElementById(buttonId);
-        const extraSpiele = document.querySelectorAll(spieleKlasse);
+    if (button) {
+        button.addEventListener("click", function () {
+            if (sichtbar === false) {
+                extraSpiele.forEach(function (spiel) {
+                    spiel.style.display = "block";
+                });
 
-        let sichtbar = false;
-
-        if (button) {
-            button.addEventListener("click", function () {
-                if (sichtbar === false) {
-                    extraSpiele.forEach(function (spiel) {
+                button.textContent = "Weniger zeigen";
+                sichtbar = true;
+            } else {
+                extraSpiele.forEach(function (spiel, index) {
+                    if (index < sichtbar_mehranzeigen) {
                         spiel.style.display = "block";
-                    });
-
-                    button.textContent = "Weniger zeigen";
-                    sichtbar = true;
-                } else {
-                    extraSpiele.forEach(function (spiel) {
+                    } else {
                         spiel.style.display = "none";
-                    });
-
-                    button.textContent = "Mehr Spiele anzeigen";
-                    sichtbar = false;
-                    // Wenn man auf mehr anzeigen klickt und wieder auf weniger ,springt nicht ans Ende sondern an Anfang smooth auto
-                    const section = button.closest(".spielplan-section");
-
-                    if (section) {
-                        section.scrollIntoView({
-                            behavior: "auto",
-                            block: "start"
-                        });
                     }
-                }
-            });
-        }
-    }
+                });
 
-    toggleSpiele("mehrSpieleBtn", ".extra-spiel");
-    toggleSpiele("mehrSpieleBtn2", ".extra-spiel2");
+                button.textContent = "Mehr Spiele anzeigen";
+                sichtbar = false;
+                
+                const section = button.closest(".spielplan-section");
+
+                if (section) {
+                    section.scrollIntoView({
+                        behavior: "auto",
+                        block: "start"
+                    });
+                }
+            }
+        });
+    }
 }
 
 toggleSpiele("mehrSpieleBtn", ".extra-spiel");
 toggleSpiele("mehrSpieleBtn2", ".extra-spiel2");
-
 // Burger-Menü
 
 const burgerBtn = document.getElementById("burgerBtn");
@@ -90,7 +83,7 @@ function countdownAktualisieren() {
     if (jetzt < startDatum) {
         zielDatum = startDatum;
         titelText = "Countdown zur Fußball-Weltmeisterschaft 2026";
-    } else if (jetzt < finaleDatum) {
+    } else if (jetzt < finaleDatum && jetzt>startDatum) {
         zielDatum = finaleDatum;
         titelText = "Countdown zum Finale der Fußball-Weltmeisterschaft 2026";
     } else {
