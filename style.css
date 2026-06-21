@@ -59,7 +59,7 @@ body {
 
 /* Falls du ein Logo im Banner hast, steuert das die Größe */
 .banner-icon-img {
-    width: 80px;
+    width: 50px;
     height: auto;
     display: block;
 }
@@ -89,8 +89,6 @@ body {
     font-style: italic;
     font-family: "Bebas Neue", sans-serif;
 }
-
-
 
 .burger {
     display: block;
@@ -232,13 +230,6 @@ nav a:active {
     cursor: pointer;
     font-size: 16px;
 }
-
-
-
-
-/* section {
-    padding: 16px;
-} */
 /* Element Das grösste Turnier der Welt mit Strich neben */
 
 .titel-strich {
@@ -456,9 +447,6 @@ p.zahl-index {
     text-decoration: none;
     color: white;
 }
-
-
-
 /* Spielplan-Styles */
 
 .spielplan-seite,
@@ -495,11 +483,6 @@ section.spielplan-header {
     height: 30px;
 
 }
-
-
-
-
-
 
 /* Spielplan Body  */
 
@@ -725,6 +708,467 @@ footer li:hover {
     transition: transform 0.3s ease;
     color: gold;
 }
+
+/* Halbfinale Seite */
+
+.attraktionen {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.attraktionen h1,
+.attraktionen>p {
+    text-align: center;
+    color: white;
+}
+
+.attraktionen h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.attraktionen>p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.attraktionen-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.attraktion-card,
+.attraktionen .news-pokal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 10px;
+}
+
+.fotonews-halbfinale,
+.fotonews-spielplan,
+.text-halbfinale,
+.attraktion-text,
+.video-finale {
+    width: 100%;
+}
+
+.fotonews-halbfinale img,
+.attraktionen .news-pokal img,
+.video-finale video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+
+}
+
+.text-halbfinale h2,
+.attraktion-text h2 {
+    color: gold;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.text-halbfinale p,
+.attraktion-text p,
+.hotel-details {
+    color: white;
+    font-size: 15px;
+}
+
+.hotel-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.icon {
+    margin-right: 4px;
+}
+
+/*  */
+
+/* Finale */
+.grossblock-finale {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.block-finale,
+.messi-video {
+    width: 100%;
+}
+
+.block-finale img,
+.messi-video video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 10px;
+}
+/* Quiz */
+#quiz-index #karte1 {
+    background-image: url("./New_Fotos/stadionquiz.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#quiz-index #karte2 {
+    background-image: url("./New_Fotos/gruppenquiz.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#quiz-index #karte3 {
+    background-image: url("./New_Fotos/pokal-quiz.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Block unter kärtchen in Quiz */
+
+.quiz-unter img {
+    width: 50px;
+}
+
+.quiz-unter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    gap: 10px;
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+.erster-block {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+    padding: 10px;
+}
+
+.quiz-titel {
+    color: gold;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+}
+
+
+.quiz-box {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 14px;
+    background-color: rgb(3, 18, 45);
+}
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.frage-status,
+.punkte-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: gold;
+    font-weight: bold;
+}
+
+.progress {
+    width: 40%;
+    height: 100%;
+    background-color: gold;
+    border-radius: 20px;
+}
+
+.quiz-frage {
+    font-size: 28px;
+    margin: 25px 0;
+}
+
+.antworten {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.antwort-btn {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 12px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.buchstabe {
+    width: 35px;
+    height: 35px;
+    border: 1px solid gold;
+    border-radius: 50%;
+    color: rgb(255, 188, 45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.pruefen-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: gold;
+    color: rgb(2, 6, 23);
+    font-weight: gold;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* ==========================================================================
+   PERFEKTES LAYOUT FÜR DIE GRUPPEN-SEITE (Basierend auf gruppen_2.jpg)
+   ========================================================================== */
+
+/* Arrière-plan sombre général */
+.gruppen-hauptseite {
+    background-color: #020617;
+    padding: 40px 5%;
+    color: white;
+}
+
+.banner-text {
+    text-align: left;
+}
+
+/* On s'assure que le titre reste bien en blanc pur */
+.titel-strich-gruppen {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 0.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.banner-icon {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(205, 184, 65, 0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e2b43b;
+    /* Doré doux */
+}
+
+.banner-text h1 {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Le titre principal avec sa ligne jaune de séparation intégrée */
+.titel-strich-gruppen {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 0.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Aligne la ligne à gauche sous le texte */
+    gap: 8px;
+    color: white;
+}
+
+/* La ligne jaune sous le titre */
+.titel-strich-gruppen span {
+    display: block;
+    width: 120px;
+    /* Largeur de la ligne jaune */
+    height: 3px;
+    /* Épaisseur de la ligne */
+    background-color: gold;
+    border-radius: 2px;
+}
+
+
+.gruppen-sub-weiss {
+    color: #ffffff !important;
+    margin: 10px 0 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.banner-text p {
+    color: #94a3b8;
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+}
+
+/* Force exactement 4 colonnes égales sur grand écran */
+.gruppen-container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* Design exact d'une boîte de groupe */
+.gruppe-box {
+    background: linear-gradient(135deg, #07153a 0%, #030d29 100%);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 12px;
+    padding: 15px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s ease;
+}
+
+.gruppe-box:hover {
+    border-color: rgba(255, 215, 0, 0.6);
+}
+
+/* Titre du groupe avec sa barre dorée en dessous */
+.gruppe-box-header {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    color: #e2b43b;
+    font-size: 1.4rem;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+/* Liste des équipes */
+.gruppe-box-liste {
+    list-style: none;
+    padding: 0 20px;
+    margin: 0;
+}
+
+.gruppe-box-liste li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 0;
+    font-size: 1.05rem;
+    color: #f1f5f9;
+}
+
+/* Gestion parfaite de tes photos de drapeaux */
+.flaggen-img {
+    width: 32px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* BARRE D'INFORMATION EN BAS */
+.gruppen-infobar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 35px;
+}
+
+.info-block {
+    background: rgba(7, 21, 58, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-icon {
+    font-size: 2rem;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-content h3 {
+    margin: 0 0 5px 0;
+    color: #e2b43b;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.info-content p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* FOOTER STYLISÉ (Comme en bas de l'image) */
+footer {
+    background-color: #020a1f;
+    padding: 40px 5% 20px 5%;
+
+}
+
+/* Styling für die neuen Links in den Info-Blöcken */
+.box-link {
+    display: inline-block;
+    margin-top: 10px;
+    /* Abstand nach oben zum Text */
+    color: #ffffff;
+    /* Textfarbe auf Weiß setzen */
+    text-decoration: none;
+    /* Entfernt den Standard-Unterstrich */
+    font-weight: bold;
+    /* Macht den Text fett */
+}
+
+/* Hover-Effekt aus dem Kurs */
+.box-link:hover {
+    text-decoration: underline;
+    /* Unterstreicht den Link beim Drüberfahren */
+    color: #ffcc00;
+    /* Optionale Farbänderung beim Hovern */
+}
+
 
 /* für PC Startseite */
 /* @media(min-width: 768px) */
@@ -1048,124 +1492,6 @@ footer li:hover {
 }
 
 
-
-
-
-/* Halbfinale Seite */
-
-.attraktionen {
-    width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-    font-family: "Bebas Neue", sans-serif;
-}
-
-.attraktionen h1,
-.attraktionen>p {
-    text-align: center;
-    color: white;
-}
-
-.attraktionen h1 {
-    font-size: 26px;
-    margin-bottom: 10px;
-}
-
-.attraktionen>p {
-    font-size: 16px;
-    margin-bottom: 25px;
-}
-
-.attraktionen-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.attraktion-card,
-.attraktionen .news-pokal {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 12px;
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    border-radius: 10px;
-}
-
-.fotonews-halbfinale,
-.fotonews-spielplan,
-.text-halbfinale,
-.attraktion-text,
-.video-finale {
-    width: 100%;
-}
-
-.fotonews-halbfinale img,
-.attraktionen .news-pokal img,
-.video-finale video {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-
-}
-
-.text-halbfinale h2,
-.attraktion-text h2 {
-    color: gold;
-    font-size: 22px;
-    margin-bottom: 8px;
-}
-
-.text-halbfinale p,
-.attraktion-text p,
-.hotel-details {
-    color: white;
-    font-size: 15px;
-}
-
-.hotel-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 12px 0;
-}
-
-.icon {
-    margin-right: 4px;
-}
-
-/*  */
-
-/* Finale */
-.grossblock-finale {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 15px;
-    box-sizing: border-box;
-}
-
-.block-finale,
-.messi-video {
-    width: 100%;
-}
-
-.block-finale img,
-.messi-video video {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    border-radius: 10px;
-}
-
 @media (min-width: 768px) {
     .grossblock-finale {
         grid-template-columns: repeat(2, 1fr);
@@ -1240,8 +1566,6 @@ footer li:hover {
         p,div{
             font-size: 20px;
         }
-        
-
     }
     /* Spielplan */
     .News-text{
@@ -1253,140 +1577,6 @@ footer li:hover {
         }
         
     }
-
-
-}
-
-/* Quiz */
-#quiz-index #karte1 {
-    background-image: url("./New_Fotos/stadionquiz.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#quiz-index #karte2 {
-    background-image: url("./New_Fotos/gruppenquiz.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#quiz-index #karte3 {
-    background-image: url("./New_Fotos/pokal-quiz.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Block unter kärtchen in Quiz */
-
-.quiz-unter img {
-    width: 50px;
-}
-
-.quiz-unter {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    gap: 10px;
-    margin: 10px 10px;
-    border-radius: 5px;
-}
-
-.erster-block {
-    display: flex;
-    flex-direction: row;
-    font-size: 10px;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.25);
-    padding: 10px;
-}
-
-.quiz-titel {
-    color: gold;
-    font-family: "Bebas Neue", sans-serif;
-    text-transform: uppercase;
-}
-
-
-.quiz-box {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 14px;
-    background-color: rgb(3, 18, 45);
-}
-
-.quiz-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-}
-
-.frage-status,
-.punkte-box {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: gold;
-    font-weight: bold;
-}
-
-.progress {
-    width: 40%;
-    height: 100%;
-    background-color: gold;
-    border-radius: 20px;
-}
-
-.quiz-frage {
-    font-size: 28px;
-    margin: 25px 0;
-}
-
-.antworten {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-}
-
-.antwort-btn {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 12px;
-    border: 1px solid gold;
-    border-radius: 10px;
-    background: transparent;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.buchstabe {
-    width: 35px;
-    height: 35px;
-    border: 1px solid gold;
-    border-radius: 50%;
-    color: rgb(255, 188, 45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-.pruefen-btn {
-    width: 100%;
-    margin-top: 20px;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    background-color: gold;
-    color: rgb(2, 6, 23);
-    font-weight: gold;
-    font-size: 18px;
-    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -1400,9 +1590,6 @@ footer li:hover {
         margin: 22px auto 0;
     }
 }
-
-
-
 /* API*/
 .ticker-container {
     width: 100%;
@@ -1464,221 +1651,3 @@ footer li:hover {
     }
 }
 
-
-
-
-
-
-/* ==========================================================================
-   PERFEKTES LAYOUT FÜR DIE GRUPPEN-SEITE (Basierend auf gruppen_2.jpg)
-   ========================================================================== */
-
-/* Arrière-plan sombre général */
-.gruppen-hauptseite {
-    background-color: #020617;
-    padding: 40px 5%;
-    color: white;
-}
-
-.banner-text {
-    text-align: left;
-}
-
-/* On s'assure que le titre reste bien en blanc pur */
-.titel-strich-gruppen {
-    font-family: 'Bebas Neue', Arial, sans-serif;
-    font-size: 3rem;
-    margin: 0;
-    letter-spacing: 2px;
-    color: #ffffff;
-}
-
-.banner-icon {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(205, 184, 65, 0.3);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #e2b43b;
-    /* Doré doux */
-}
-
-.banner-text h1 {
-    font-family: 'Bebas Neue', Arial, sans-serif;
-    font-size: 2rem;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-/* Le titre principal avec sa ligne jaune de séparation intégrée */
-.titel-strich-gruppen {
-    font-family: 'Bebas Neue', Arial, sans-serif;
-    font-size: 3rem;
-    margin: 0;
-    letter-spacing: 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Aligne la ligne à gauche sous le texte */
-    gap: 8px;
-    color: white;
-}
-
-/* La ligne jaune sous le titre */
-.titel-strich-gruppen span {
-    display: block;
-    width: 120px;
-    /* Largeur de la ligne jaune */
-    height: 3px;
-    /* Épaisseur de la ligne */
-    background-color: gold;
-    border-radius: 2px;
-}
-
-.gruppen-sub-weiss {
-    color: #ffffff !important;
-    margin: 10px 0 0 0;
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-.banner-text p {
-    color: #94a3b8;
-    margin: 5px 0 0 0;
-    font-size: 1.1rem;
-}
-
-/* Force exactement 4 colonnes égales sur grand écran */
-.gruppen-container-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-bottom: 50px;
-}
-
-/* Design exact d'une boîte de groupe */
-.gruppe-box {
-    background: linear-gradient(135deg, #07153a 0%, #030d29 100%);
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    border-radius: 12px;
-    padding: 15px 0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    transition: border-color 0.3s ease;
-}
-
-.gruppe-box:hover {
-    border-color: rgba(255, 215, 0, 0.6);
-}
-
-/* Titre du groupe avec sa barre dorée en dessous */
-.gruppe-box-header {
-    font-family: 'Bebas Neue', Arial, sans-serif;
-    color: #e2b43b;
-    font-size: 1.4rem;
-    text-align: center;
-    letter-spacing: 1px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-    margin-bottom: 10px;
-}
-
-/* Liste des équipes */
-.gruppe-box-liste {
-    list-style: none;
-    padding: 0 20px;
-    margin: 0;
-}
-
-.gruppe-box-liste li {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 8px 0;
-    font-size: 1.05rem;
-    color: #f1f5f9;
-}
-
-/* Gestion parfaite de tes photos de drapeaux */
-.flaggen-img {
-    width: 32px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 3px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* BARRE D'INFORMATION EN BAS */
-.gruppen-infobar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 35px;
-}
-
-.info-block {
-    background: rgba(7, 21, 58, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.info-icon {
-    font-size: 2rem;
-    background: rgba(255, 215, 0, 0.1);
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.info-content h3 {
-    margin: 0 0 5px 0;
-    color: #e2b43b;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-}
-
-.info-content p {
-    margin: 0;
-    color: #94a3b8;
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-/* FOOTER STYLISÉ (Comme en bas de l'image) */
-footer {
-    background-color: #020a1f;
-    padding: 40px 5% 20px 5%;
-
-}
-
-/* Styling für die neuen Links in den Info-Blöcken */
-.box-link {
-    display: inline-block;
-    margin-top: 10px;
-    /* Abstand nach oben zum Text */
-    color: #ffffff;
-    /* Textfarbe auf Weiß setzen */
-    text-decoration: none;
-    /* Entfernt den Standard-Unterstrich */
-    font-weight: bold;
-    /* Macht den Text fett */
-}
-
-/* Hover-Effekt aus dem Kurs */
-.box-link:hover {
-    text-decoration: underline;
-    /* Unterstreicht den Link beim Drüberfahren */
-    color: #ffcc00;
-    /* Optionale Farbänderung beim Hovern */
-}
