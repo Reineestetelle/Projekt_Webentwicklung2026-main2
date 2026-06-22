@@ -1606,23 +1606,7 @@ footer {
         font-size: 15px;
     }
 }
-/* 
-@media (min-width: 801px) {
-    .spielplan-table tbody {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-        gap: 12px;
-    }
 
-    .spiel-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-size: 15px;
-    }
-
-
-} */
 
 @media (min-width: 768px) {
     .antworten {
